@@ -1,0 +1,16 @@
+{
+  "CN": "system:node:10.10.40.72",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "ABC",
+      "L": "ABC",
+      "O": "system:nodes",
+      "OU": "Kubernetes",
+      "ST": "ABC"
+    }
+  ]
+}

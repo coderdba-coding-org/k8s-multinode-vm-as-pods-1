@@ -1,0 +1,1 @@
+docker exec etcd /bin/sh -c "export ETCDCTL_API=3 && /usr/local/bin/etcdctl delete foo"

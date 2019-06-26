@@ -1,0 +1,2 @@
+docker exec etcd /bin/sh -c "export ETCDCTL_API=3 && /usr/local/bin/etcdctl get foo"
+docker exec etcd /bin/sh -c "export ETCDCTL_API=3 && /usr/local/bin/etcdctl get foo2"
