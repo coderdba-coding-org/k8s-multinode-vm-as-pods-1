@@ -1,2 +1,12 @@
+echo
+echo with api v3
 docker exec etcd /bin/sh -c "export ETCDCTL_API=3 && /usr/local/bin/etcdctl member list"
+
+echo
+echo with api v2
+docker exec etcd /bin/sh -c "export ETCDCTL_API=2 && /usr/local/bin/etcdctl member list"
+
+echo
+echo endpoint status - local
+docker exec etcd /bin/sh -c "export ETCDCTL_API=3 && /usr/local/bin/etcdctl endpoint status"
 
