@@ -20,8 +20,5 @@ spec:
     - --cluster-cidr=10.20.0.0/16
     - --service-cluster-ip-range=10.96.0.0/12
     - --admission-control=NamespaceLifecycle,LimitRanger,SecurityContextDeny,ServiceAccount,ResourceQuota
-    #- --cgroups-per-qos=false
     image: gcr.io/google_containers/kube-apiserver-amd64:v1.15.0
-    #image: gcr.io/google_containers/kube-apiserver-amd64:v1.13.3
-    imagePullPolicy: IfNotPresent
     name: kube-apiserver
