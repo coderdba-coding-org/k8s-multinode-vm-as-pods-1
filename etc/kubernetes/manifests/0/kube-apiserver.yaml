@@ -13,11 +13,8 @@ spec:
   containers:
   - command:
     - kube-apiserver
-    - --advertise-address=192.168.40.101
     - --insecure-bind-address=127.0.0.1
-    - --bind-address=0.0.0.0
-    - --etcd-servers=https://192.168.40.101:2379,https://192.168.40.102:2379,https://192.168.40.101:2379 
-    - --cluster-cidr=10.20.0.0/16
+    - --etcd-servers=https://192.168.40.101:2379,https://192.168.40.102:2379,https://192.168.40.101:2379 \
     - --service-cluster-ip-range=10.96.0.0/12
     - --admission-control=NamespaceLifecycle,LimitRanger,SecurityContextDeny,ServiceAccount,ResourceQuota
     image: gcr.io/google_containers/kube-apiserver-amd64:v1.15.0

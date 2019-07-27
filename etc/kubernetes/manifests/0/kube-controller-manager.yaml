@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    scheduler.alpha.kubernetes.io/critical-pod: ""
+  labels:
+    component: kube-controller-manager
+    tier: control-plane
+  name: kube-controller-manager
+  namespace: kube-system
+spec:
+  containers:
+  - command:
+    - kube-controller-manager
+    - --master=http://127.0.0.1:8080
+    - --leader-elect=true
+    image: gcr.io/google_containers/kube-controller-manager-amd64:v1.15.0
+    name: kube-controller-manager
+  hostNetwork: true
